@@ -44,15 +44,15 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     "corsheaders",
+    "djstripe",
 ]
 
 AUTH_USER_MODEL = 'users.User'
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -178,3 +178,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+STRIPE_TEST_PUBLIC_KEY = "pk_test_51M8mDDSANKvgFHaIvqxSVxbC3jtQPQPh0OyOdGwgvNRWQ1GhLuiSkgLFEze65S8E82DJdZGe7RIXfL1mCIBtobZF00FZi7sf9b"
+STRIPE_TEST_SECRET_KEY = "sk_test_51M8mDDSANKvgFHaIRMMgCOaEt4ZE2KdfHW9xBsllH2jG9yjw7Pz9hS7DgGqnCdKsPdOk4YSwWUgOWJubSwjWFigs00ojBekkP0"
+STRIPE_LIVE_MODE = False
+DJSTRIPE_WEBHOOK_SECRET = "whsec_6YmAR4KDgJ96xkfEHboMOn9ocNTnGpyA"
+DJSTRIPE_FOREIGN_KEY_TO_FIELD = "id"
