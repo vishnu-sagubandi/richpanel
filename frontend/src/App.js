@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Payment from './components/Payment';
 import PlanCard from './components/PlanCard';
 import PlanSelection from './components/PlanSelection';
+import Home from "./components/Home";
 
 import PrivateRoute from './utils/PrivateRoute'
 import { AuthProvider } from './context/AuthContext'
@@ -19,6 +20,10 @@ function App() {
 		<Router>
 		<AuthProvider>
 			<Routes>
+				<Route
+					path='/'
+					element={<PrivateRoute><Home /></PrivateRoute>}
+				/>
 				<Route
 					exact
 					path='/plans'

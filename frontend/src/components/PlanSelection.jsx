@@ -1,13 +1,14 @@
 import React, { useContext, useState, useEffect } from "react";
 import styles from "../styles/planselectionPage.module.css";
 import AuthContext from "../context/AuthContext";
+import { API_URL } from "../api";
 
 function PlanSelection() {
   const [data, setData] = useState([]);
   let { handlePlan } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/subscriptions/list")
+    fetch(API_URL + "subscriptions/list")
       .then((res) => {
         return res.json();
       })
