@@ -1,0 +1,9 @@
+:root {
+	--primaryBlue: #1e4c90;
+	--fadedBlue: #7993bd;
+	--white: #ffffff;
+	--grey: #e1e2e2;
+	--errorRed: #e4736f;
+
+	font-size: 62.5%;
+}

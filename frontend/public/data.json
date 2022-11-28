@@ -1,0 +1,62 @@
+{
+  "Monthly":[
+    {
+      "name":  "Mobile", 
+      "Price":100,
+      "Video Quality": "Good",
+      "Resolution": "480p",
+      "Devices":["Phone", "Tablet"]
+    },
+    {
+      "name": "Basic",
+      "Price":200,
+      "Video Quality": "Good",
+      "Resolution": "480p",
+      "Devices":["Phone", "Tablet","Computer","TV"]
+    },
+    {
+      "name": "Standard",
+      "Price":500,
+      "Video Quality": "Better",
+      "Resolution": "1080p",
+      "Devices":["Phone", "Tablet","Computer","TV"]
+    },
+    {
+      "name": "Premium",
+      "Price":700,
+      "Video Quality": "Best",
+      "Resolution": "4K+HDR",
+      "Devices":["Phone", "Tablet","Computer","TV"]
+    }
+  ],
+  "Yearly":[
+    {
+      "name":  "Mobile", 
+      "Price":1000,
+      "Video Quality": "Good",
+      "Resolution": "480p",
+      "Devices":["Phone", "Tablet"]
+    },
+    {
+      "name": "Basic",
+      "Price":2000,
+      "Video Quality": "Good",
+      "Resolution": "480p",
+      "Devices":["Phone", "Tablet","Computer","TV"]
+    },
+    {
+      "name": "Standard",
+      "Price":5000,
+      "Video Quality": "Better",
+      "Resolution": "1080p",
+      "Devices":["Phone", "Tablet","Computer","TV"]
+    },
+    {
+      "name": "Premium",
+      "Price":7000,
+      "Video Quality": "Best",
+      "Resolution": "4K+HDR",
+      "Devices":["Phone", "Tablet","Computer","TV"]
+    }
+  ]
+}

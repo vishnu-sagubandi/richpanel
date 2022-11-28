@@ -1,0 +1,19 @@
+.sldierItem {
+	padding: 1rem;
+}
+
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.gridContainer {
+	display: grid;
+	grid-template-columns: 400px 150px 150px 150px 150px;
+}
+
+.slider {
+}
