@@ -95,7 +95,7 @@ export const AuthProvider = ({children}) => {
     }
 
     let handlePlan = () => {
-        navigate('/currentplan')
+        navigate('/payment')
     }
 
     let contextData = {
