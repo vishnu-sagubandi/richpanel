@@ -46,6 +46,16 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)
 
+    # djstripe
+    customer = models.ForeignKey(
+        'djstripe.Customer', null=True, blank=True, on_delete=models.SET_NULL,
+        help_text="The user's Stripe Customer object, if it exists"
+    )
+    subscription = models.ForeignKey(
+        'djstripe.Subscription', null=True, blank=True, on_delete=models.SET_NULL,
+        help_text="The user's Stripe Subscription object, if it exists"
+    )
+
     objects = CustomAccountManager()
 
     USERNAME_FIELD = 'email'

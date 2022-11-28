@@ -16,7 +16,10 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
         # Add custom claims
         token['name'] = user.name
-
+        if user.subscription is not None:
+            token['subscription'] = True
+        else:
+            token['subscription'] = False
         return token
 
 
