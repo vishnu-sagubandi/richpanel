@@ -32,7 +32,7 @@ function App() {
 				<Route
 					exact
 					path='/currentplan'
-					element={<PrivateRoute><PlanCard /></PrivateRoute>}
+					element={<PrivateRoute><PlanCard plan="Active"/></PrivateRoute>}
 				/>
 				<Route
 					exact

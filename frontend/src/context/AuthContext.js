@@ -32,7 +32,10 @@ export const AuthProvider = ({children}) => {
             setUser(jwt_decode(data.access))
             localStorage.setItem('authTokens', JSON.stringify(data))
             toast.success('Login Successful')
-            navigate('/plans')
+            if(user.subscription)
+                navigate('/currentplan')
+            else
+                navigate('/plans')
         }else{
             toast.warning(data.detail)
         }
@@ -91,12 +94,17 @@ export const AuthProvider = ({children}) => {
         }
     }
 
+    let handlePlan = () => {
+        navigate('/currentplan')
+    }
+
     let contextData = {
         user:user,
         authTokens:authTokens,
         loginUser:loginUser,
         registerUser:registerUser,
         logoutUser:logoutUser,
+        handlePlan:handlePlan,
     }
 
 
